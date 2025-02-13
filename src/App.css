@@ -32,28 +32,49 @@
   from {
     transform: rotate(0deg);
   }
+
   to {
     transform: rotate(360deg);
   }
 }
 
-html{
+html {
   scroll-snap-type: y mandatory;
   scroll-behavior: smooth;
 }
 
-*{
+* {
   box-sizing: border-box;
-  font-family: "Comfortaa", sans-serif;
-  font-weight: 700;
+  font-family: "poppins", serif;
+  font-weight: 400;
 }
 
-body{
-  background-color: #05011f;
+body {
+  background: #121212;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: lightgray;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
-section{
+section {  
+  width: 100vw;
+  @media screen and (min-width:768px) {
+    width: 100vw;
+    margin: 0;
+  }
+}
+
+.header-card{
+  position: fixed;
+  left: 0;
+  right: 0;
+}
+
+#homeSection{
   height: 100vh;
-  scroll-snap-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

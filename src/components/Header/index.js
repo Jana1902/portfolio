@@ -1,28 +1,20 @@
-import {Component} from 'react'
+import { Component } from 'react'
 
-import AppContext from '../../context/AppContext'
-
-import {NavBar, NavLogo, NavList, NavItem, NavButton} from './styledComponents'
+import { NavBar, NavLogo, NavList, NavItem, NavButton } from './styledComponents'
 
 class Header extends Component {
-    render(){
+    render() {
         return (
-            <AppContext.Consumer>
-                {value => {
-                    const {isDark} = value
-                    return (
-                        <NavBar isDark={isDark}>
-                            <NavLogo isDark={isDark}>Portfolio</NavLogo>
-                            <NavList>
-                                <NavItem isDark={isDark}>Home</NavItem>
-                                <NavItem isDark={isDark}>Education</NavItem>
-                                <NavItem isDark={isDark}>Projects</NavItem>
-                                <NavItem isDark={isDark}>Contact</NavItem>
-                            </NavList>
-                            <NavButton isDark={isDark}>Hire me!</NavButton>
-                        </NavBar>
-                    )}}
-            </AppContext.Consumer>
+            <NavBar>
+                <NavLogo>Portfolio</NavLogo>
+                <NavList>
+                    <NavItem>Education</NavItem>
+                    <NavItem>Home</NavItem>
+                    <NavItem>Projects</NavItem>
+                    <NavItem>Contact</NavItem>
+                </NavList>
+                <NavButton>Hire me!</NavButton>
+            </NavBar>
         )
     }
 }

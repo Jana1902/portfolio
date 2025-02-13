@@ -1,13 +1,21 @@
 import Header from './components/Header'
 
+import Home from './components/Home'
+
+import About from './components/About'
+
 import './App.css';
 
 function App() {
   return (
     <>
-     <section>Hero</section>
-     <section>Education</section>
-     <section>Projects</section>
+    <div className='header-card'><Header /></div>
+      <section id="homeSection">
+        <Home />
+      </section>
+      <section>
+        <About />
+      </section>
     </>
   );
 }

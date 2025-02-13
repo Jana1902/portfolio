@@ -1,44 +1,59 @@
 import styled from 'styled-components'
 
 export const NavBar = styled.nav`
-  height: 9vh;
-  width: 80vw;
-  color:  ${props => (props.isDark ? '#fff' : '#000')};
-  border: 2px solid #000;
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  height: 10vh;
+  width: 100vw;
+  color: #fff;
+  backdrop-filter: blur(40px);
+  -webkit-backdrop-filter: blur(20px);
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  border-radius: 13px;
   padding: 0 10px;
-  margin-top: 10px;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  @media screen and (min-width: 768px){
+    width: 80vw;
+  }
 `
 
 export const NavLogo = styled.h1`
-  font-size: 20px;
-  font-family: 'Comfortaa', serif;
-  font-weight: 600;
-  color: #000;
+    font-size: 28px;
+  background: -webkit-linear-gradient(180deg, #BB86FC, #03DAC6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-weight: 500;
+  // color: #BB86FC;
 `
 
 export const NavList = styled.ul`
-  display: flex;
+  display: none;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   padding: 0;
   gap: 15px;
+
+  @media screen and (min-width: 768px){
+    display: flex;
+  };
 `
 
 export const NavItem = styled.li`
   list-style: none;
-  color: ${props => (props.isDark ? '#fff': '#000')};
+  color: #E0E0E0;
   cursor: pointer;
-  font-size: 14px;
-  color: #000;
-  font-weight: 600;
+  font-size: 16px;
+  font-weight: 300;
+
+  &:hover {
+    color: #03DAC6;
+    text-shadow: 0 0 10px rgb(139, 89, 200);
+    transition: 0.2s; 
+  }
 `
 
 export const NavButton = styled.button`
@@ -46,9 +61,16 @@ export const NavButton = styled.button`
   height: 35px;
   font-size: 12px;
   border-radius: 25px;
-  color: ${props => (props.isDark ? '#000': '#000')};
-  border: 1px solid ${props => (props.isDark ? '#000': '#000')};
+  color: #BB86FC;
+  border: 1px solid #BB86FC;
   margin: 0 10px;
   background: transparent;
-  font-weight: 600;
+  font-weight: 400;
+
+  &:hover {
+    background-color: #BB86FC;
+    color: #121212;
+    cursor: pointer;
+    transition: .3s;
+  }
 `
