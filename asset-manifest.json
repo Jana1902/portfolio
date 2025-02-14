@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Jana1902.github.io/portfolio/static/css/main.0d70f5b4.css",
+    "main.js": "/Jana1902.github.io/portfolio/static/js/main.04c7a13a.js",
+    "index.html": "/Jana1902.github.io/portfolio/index.html",
+    "main.0d70f5b4.css.map": "/Jana1902.github.io/portfolio/static/css/main.0d70f5b4.css.map",
+    "main.04c7a13a.js.map": "/Jana1902.github.io/portfolio/static/js/main.04c7a13a.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.0d70f5b4.css",
+    "static/js/main.04c7a13a.js"
+  ]
+}
