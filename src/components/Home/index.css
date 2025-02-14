@@ -43,10 +43,11 @@
     }
 }
 
-.home-container button{
+.home-container button, .home-container button a{
     width: 120px;
     height: 40px;
     border-radius: 25px;
+    text-decoration: none;
     background: linear-gradient(to right, #03DAC6, #BB86FC) ;
     color: #121212;
     border: none;

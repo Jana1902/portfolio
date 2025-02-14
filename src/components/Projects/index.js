@@ -36,7 +36,7 @@ const container = {
     scale: 1,
     transition: {
       delayChildren: 0.3,
-      staggerChildren: 0.5,
+      staggerChildren: 0.3,
     },
   },
 };
@@ -48,9 +48,9 @@ const item = {
     y: 0,
     opacity: 1,
     transition: {
-      delayChildren: 0.6,
+      delayChildren: 0.3,
       ease: easeInOut,
-      staggerChildren: 0.4,
+      staggerChildren: 0.3,
     },
   },
 };
@@ -58,21 +58,22 @@ const item = {
 const Projects = () => (
   <div className="projects-container">
     <motion.h1
-      initial={{ opacity: 0, scale: 0.8 }}
+      initial={{ opacity: 0, scale: 0.9 }}
       whileInView={{ opacity: 1, scale: 1 }}
-      transition={{ duration: 1 }}
+      transition={{ duration: 0.5 }}
       className="project-heading"
     >
       Projects
     </motion.h1>
-    <motion.ul
-      className="projects-list"
-      variants={container}
-      initial="hidden"
-      whileInView="visible"
-    >
-      {projectsList.map((each) => (
-        <motion.li variants={item}>
+    <motion.ul className="projects-list">
+      {projectsList.map((each, index) => (
+        <motion.li
+          key={each.id}
+          initial={{ opacity: 0, x: 30, y: 20 }}
+          whileInView={{ opacity: 1, x: 0, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.2, ease: "easeInOut" }}
+          viewport={{ once: false, amount: 0.1 }}
+        >
           <div className="project-card">
             <h1 className="project-title">{each.name}</h1>
             <p className="project-description">{each.description}</p>

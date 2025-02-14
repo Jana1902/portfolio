@@ -91,6 +91,7 @@ section {
   min-height: 100vh;
   background-color: #121212;
   padding-bottom: 30px;
+  padding-top: 30px;
   margin: 0;
 }
 
@@ -99,5 +100,10 @@ section {
   position: relative;
   margin: 0;
   background-color: #121212;
-  /* z-index: 2; */
+}
+
+#contactSection{
+  width: 100vw;
+  background-color: #0f0e0e;
+  position: relative;
 }

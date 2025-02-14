@@ -1,11 +1,12 @@
 import { Component } from "react";
 
+import {FaLinkedin, FaGithub} from 'react-icons/fa'
+
 import {
   NavBar,
   NavLogo,
   NavList,
   NavItem,
-  NavButton,
   LinkEl,
 } from "./styledComponents";
 
@@ -16,7 +17,7 @@ class Header extends Component {
         <NavLogo>Portfolio</NavLogo>
         <NavList>
           <NavItem>
-            <LinkEl href="#homeSection">Home</LinkEl>
+            <LinkEl href="#">Home</LinkEl>
           </NavItem>
           <NavItem>
             <LinkEl href="#aboutSection">About</LinkEl>
@@ -25,10 +26,21 @@ class Header extends Component {
             <LinkEl href="#projectsSection">Projects</LinkEl>
           </NavItem>
           <NavItem>
-            <LinkEl href="#">Contact</LinkEl>
+            <LinkEl href="#contactSection">Contact</LinkEl>
           </NavItem>
         </NavList>
-        <NavButton>Hire me!</NavButton>
+        <ul className="social-links">
+              <li className="social-icons">
+                <a href="https://www.linkedin.com/in/-janardhanan/" target="_blank">
+                  <FaLinkedin />
+                </a>
+              </li>
+              <li className="social-icons">
+                <a href="https://github.com/Jana1902" target="_blank">
+                  <FaGithub />
+                </a>
+              </li>
+            </ul>
       </NavBar>
     );
   }
