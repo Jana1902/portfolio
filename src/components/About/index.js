@@ -38,30 +38,29 @@ const skillsList = [
 ];
 
 const container = {
-    hidden: { opacity: 1, scale: 0 },
-    visible: {
-      opacity: 1,
-      scale: 1,
-      transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2,
-      }
-    }
-  };
-  
+  hidden: { opacity: 1, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 const item = {
-    hidden: { y: 20, opacity: 0 },
-    visible: {
-      y: 0,
-      opacity: 1,
-      transition: {
-        delayChildren: 0.2,
-        ease: easeInOut, 
-        staggerChildren: 0.2,
-      }
-    }
-  }
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      delayChildren: 0.2,
+      ease: easeInOut,
+      staggerChildren: 0.2,
+    },
+  },
+};
 
 const About = () => (
   <>
@@ -84,7 +83,12 @@ const About = () => (
       </motion.div>
       <div className="skills-container">
         <h1 className="skill-heading">Skills</h1>
-        <motion.ul className="skill-list" variants={container} initial="hidden" whileInView="visible">
+        <motion.ul
+          className="skill-list"
+          variants={container}
+          initial="hidden"
+          whileInView="visible"
+        >
           {skillsList.map((each) => (
             <motion.li key={each.id} className="skill" variants={item}>
               {each.skill}

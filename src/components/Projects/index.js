@@ -1,3 +1,5 @@
+import { easeInOut, motion } from "framer-motion";
+
 import "./index.css";
 
 const projectsList = [
@@ -27,12 +29,50 @@ const projectsList = [
   },
 ];
 
+const container = {
+  hidden: { opacity: 0, scale: 0 },
+  visible: {
+    opacity: 1,
+    scale: 1,
+    transition: {
+      delayChildren: 0.3,
+      staggerChildren: 0.5,
+    },
+  },
+};
+
+const item = {
+  hidden: { x: 30, y: 20, opacity: 0 },
+  visible: {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    transition: {
+      delayChildren: 0.6,
+      ease: easeInOut,
+      staggerChildren: 0.4,
+    },
+  },
+};
+
 const Projects = () => (
   <div className="projects-container">
-    <h1 className="project-heading">Projects</h1>
-    <ul className="projects-list">
+    <motion.h1
+      initial={{ opacity: 0, scale: 0.8 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 1 }}
+      className="project-heading"
+    >
+      Projects
+    </motion.h1>
+    <motion.ul
+      className="projects-list"
+      variants={container}
+      initial="hidden"
+      whileInView="visible"
+    >
       {projectsList.map((each) => (
-        <li>
+        <motion.li variants={item}>
           <div className="project-card">
             <h1 className="project-title">{each.name}</h1>
             <p className="project-description">{each.description}</p>
@@ -45,9 +85,9 @@ const Projects = () => (
               <button className="project-link">View Project</button>
             </a>
           </div>
-        </li>
+        </motion.li>
       ))}
-    </ul>
+    </motion.ul>
   </div>
 );
 
