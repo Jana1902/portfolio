@@ -1,21 +1,77 @@
-.custom-shape-divider-top-1739468551 {
-    position: relative;
+.about-container{
+    padding: 0 20px;
     width: 100vw;
-    top: -20px;
-    left: 0;
-    right: 0;
-    overflow: hidden;
-    line-height: 0;
-    margin: 0;
+    margin: auto;
 }
 
-.custom-shape-divider-top-1739468551 svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 87px;
+.about-heading{
+    font-size: 36px;
+    color: #fff;
 }
 
-.custom-shape-divider-top-1739468551 .shape-fill {
-    fill: #FFFFFF;
+.about-desccription{
+    font-size: 20px;
+    line-height: 1.5;
+    color: #B0BEC5;
+}
+
+.about-description span{
+    color: #ba96e7;
+    /* color: #03DAC6; */
+}
+
+@media screen and (min-width: 768px){
+    .about-container{
+        width: 80vw;
+    }
+
+    .about-heading{
+        font-size: 42px;
+    }
+    
+    .about-description{
+        font-size: 24px;
+        line-height: 1.8;
+    }
+}
+
+.skills-container{
+    margin-top: 30px;
+}
+
+.skill-heading{
+    font-size: 28px;
+    text-align: center;
+    color: #fff;
+}
+
+.skill-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    padding: 0;
+    gap: 50px;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.skill{
+    font-size: 22px;
+    font-weight: 300;
+    /* text-shadow: 0 0 3px #03DAC6, 0 0 4px #BB86FC; */
+    border: 1px solid #BB86FC;
+    border-radius: 30px;
+    padding: 5px 20px;
+    color: lightgray;
+    box-shadow: 0 0 6px 1px #BB86FC;
+}
+
+@media screen and (min-width: 768px){
+    .skill-heading{
+        font-size: 38px;
+    }
+    .skill{
+        font-size: 28px;
+    }
 }

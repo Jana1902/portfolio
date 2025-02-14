@@ -55,14 +55,17 @@ body {
   background-size: cover;
   color: lightgray;
   scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
   overflow-x: hidden;
 }
 
 section {  
   width: 100vw;
+  top: 0;
+  left: 0;
+  background-color: #121212;
   @media screen and (min-width:768px) {
-    width: 100vw;
-    margin: 0;
+    margin: auto;
   }
 }
 
@@ -70,6 +73,7 @@ section {
   position: fixed;
   left: 0;
   right: 0;
+  z-index: 3;
 }
 
 #homeSection{
@@ -77,4 +81,23 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  position: sticky;
+  top: 0;
+}
+
+#aboutSection{
+  position:relative;
+  top: 0;
+  min-height: 100vh;
+  background-color: #121212;
+  padding-bottom: 30px;
+  margin: 0;
+}
+
+#projectsSection{
+  min-height: 100vh;
+  position: relative;
+  margin: 0;
+  background-color: #121212;
+  /* z-index: 2; */
 }

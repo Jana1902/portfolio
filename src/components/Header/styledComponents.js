@@ -14,6 +14,7 @@ export const NavBar = styled.nav`
   left: 0;
   right: 0;
   margin: auto;
+  z-index: 3;
 
   @media screen and (min-width: 768px){
     width: 80vw;
@@ -54,6 +55,11 @@ export const NavItem = styled.li`
     text-shadow: 0 0 10px rgb(139, 89, 200);
     transition: 0.2s; 
   }
+`
+
+export const LinkEl = styled.a`
+  color: inherit;
+  text-decoration: none;
 `
 
 export const NavButton = styled.button`

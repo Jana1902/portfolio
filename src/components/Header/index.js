@@ -1,22 +1,37 @@
-import { Component } from 'react'
+import { Component } from "react";
 
-import { NavBar, NavLogo, NavList, NavItem, NavButton } from './styledComponents'
+import {
+  NavBar,
+  NavLogo,
+  NavList,
+  NavItem,
+  NavButton,
+  LinkEl,
+} from "./styledComponents";
 
 class Header extends Component {
-    render() {
-        return (
-            <NavBar>
-                <NavLogo>Portfolio</NavLogo>
-                <NavList>
-                    <NavItem>Education</NavItem>
-                    <NavItem>Home</NavItem>
-                    <NavItem>Projects</NavItem>
-                    <NavItem>Contact</NavItem>
-                </NavList>
-                <NavButton>Hire me!</NavButton>
-            </NavBar>
-        )
-    }
+  render() {
+    return (
+      <NavBar>
+        <NavLogo>Portfolio</NavLogo>
+        <NavList>
+          <NavItem>
+            <LinkEl href="#homeSection">Home</LinkEl>
+          </NavItem>
+          <NavItem>
+            <LinkEl href="#aboutSection">About</LinkEl>
+          </NavItem>
+          <NavItem>
+            <LinkEl href="#projectsSection">Projects</LinkEl>
+          </NavItem>
+          <NavItem>
+            <LinkEl href="#">Contact</LinkEl>
+          </NavItem>
+        </NavList>
+        <NavButton>Hire me!</NavButton>
+      </NavBar>
+    );
+  }
 }
 
-export default Header
+export default Header;
