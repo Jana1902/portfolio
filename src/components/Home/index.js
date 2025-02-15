@@ -7,9 +7,7 @@ const Home = () => (
       <h3>
         Full Stack <span>developer</span>
       </h3>
-      <button>
-        <a href="#aboutSection">Get Started</a>
-      </button>
+        <a href="#aboutSection"><button>Get Started</button></a>
     </div>
     <div class="custom-shape-divider-bottom-1739467871">
       <svg
